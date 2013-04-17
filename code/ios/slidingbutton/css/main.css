@@ -1,0 +1,7 @@
+.ios-slider:before{
+	content:"On";
+	
+}
+.ios-slider:after{
+	content:"Off";
+;
