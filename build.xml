@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="test.ant" name="max_practical_css" basedir=".">
+				
+	<property file="build.properties"/>
+	
+	<target name="test.ant" description="Exports the script of the database ">
+		<echo message="Testing ant in this environment. " />
+		<echo message="basedir:     ${basedir}" />
+		<echo message="ant.version: ${ant.version}" />
+	</target>
+
+	<target name="clean">
+		<echo message="Cleaning Build Space"/>
+		<delete includeemptydirs="true">
+			<fileset dir="${build.dir}" includes="**/*" defaultexcludes="no" />
+		</delete>
+	</target>
+
+
+	<target name="build" depends="copyFilesToBuild,polish" description="Creating a clean copy of the site" />
+
+
+	
+	<target name="copyFilesToBuild" description="Create a gitless version of the source code.">
+		<echo message="Copying Files to Build Location"/>
+		<copy todir="${build.dir}" preservelastmodified="true" verbose="true" >
+			<fileset dir="${basedir}/">
+				<exclude name='.gitignore'/>
+				<exclude name='.git/**'/>
+				<exclude name='build.properties'/>
+				<exclude name='build.xml'/>
+				<exclude name='build.log'/>
+				<exclude name='lib/**'/>
+				<exclude name='**/*.scss'/>
+				<exclude name='**/cache/*.html'/>
+				<exclude name='**/import/**'/>
+				<exclude name='.project'/>
+				<exclude name='README.MD'/>
+			</fileset>	
+		</copy>
+	</target>
+
+	<target name="copyCredsToBuild" description="Copy DB creds to correct spot">
+		<echo message="Copying Files to Build Location"/>
+		<copy todir="${build.dir}/config" preservelastmodified="true" verbose="true" >
+			<fileset dir="${creds.dir}/">
+			</fileset>	
+		</copy>
+	</target>
+
+	<target name="setVersion">
+		<echo message="Generating a Build number"/>
+		<buildnumber/>
+		<echo message="Build Number ${build.number} "/>
+		<property name="app.version" value="2.0.${build.number}"/>	
+		<echo message="Application Version: ${app.version} "/> 
+	</target>
+
+	<target name="polish">
+		<echo message="Removing extra files."/>
+		<delete file='${build.dir}/settings.properties'/>
+		<delete file='${build.dir}/settings.old.properties'/>
+		<delete file='${build.dir}/build.xml'/>
+		<delete file='${build.dir}/build.old.xml'/>
+		<delete file='${build.dir}/build.number'/>
+		<delete file='${build.dir}/.project'/>
+		<delete file='${build.dir}/settings.xml'/>
+		<delete file='${build.dir}/sql/cleanDatabase.sql'/>
+		<delete dir='${build.dir}/trunk'/>
+		<delete dir='${build.dir}/test'/>
+		<delete dir='${build.dir}/log'/>
+		<delete dir='${build.dir}/sql'/>
+		<delete dir='${build.dir}/scripts'/>
+		<delete dir='${build.dir}/assets/css/.sass-cache'/>
+		<delete dir='${build.dir}/TerryRyansORMCodeJumpstart'/>
+
+		<replace summary="${verbose}">
+			<fileset dir="${build.dir}">
+				<exclude name="**/assets/cache/**"/>
+				<exclude name="**/examples/**"/>
+				<exclude name="**/createtheweb/**"/>
+				<exclude name="**/presos/**"/>
+			</fileset>	
+
+			<replacefilter token="terrenceryan.dev" value="terrenceryan.com"/>
+		</replace>
+
+		
+	</target>
+
+	<target name="zip" description="Creates a zip file of the build.">
+		<echo message="Creating Zip File"/>
+		<zip destfile="${package.dir}\${app.name}.${app.version}.zip" basedir="${build.dir}"/>
+	</target>
+
+
+
+	<!-- ****************************  -->
+	<!-- GIT TASKS  -->
+	<!-- ****************************  -->
+	<target name="gitTag" description="Creates a tag" depends="setVersion">
+		<echo message="Creating Tag: ${app.version}"/>
+		
+		<exec executable="${git.exe}" spawn="false" dir="${basedir}">
+			<arg line="tag"/>
+			<arg line="${app.version}"/>
+		</exec>
+		
+	</target>
+
+
+
+
+
+	
+
+</project>	
