@@ -1,0 +1,57 @@
+
+header{
+	background-color: #405C82;
+	color: #BDC6D3;
+	width: 100%;
+	margin: 0;
+	font-weight: bold;
+	padding: 3px 0;
+	background-image: url('plane.svg');
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	background-position: -20% center;
+}
+
+header div, header time{
+
+	display: inline-block;
+	width: 32%;
+	padding: 0;
+	margin: 0;	
+}
+
+time{
+	text-align: center;
+}
+
+.signal{
+	padding: 0 0 0 3px;
+	
+}
+.battery{
+	text-align: right;
+}
+
+.airplane-mode{
+	background-position: 1% center;
+
+}
+
+.airplane-mode .signal{
+	opacity: 0;
+
+}
+
+.signal {
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+#toolbar {
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}

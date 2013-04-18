@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Practical CSS - Combine All</title>
+	<link rel="stylesheet" href="../background/css/main.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../countbadge/css/main.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../roundedlist/css/main.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../slidingbutton/css/main.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../planemode/css/main.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function() {
+		   document.querySelector('#airplane').addEventListener('change', onAirplaneMode);
+		});
+
+		function onAirplaneMode(e){
+			console.log(e);
+			if (e.srcElement.checked == true){
+				document.querySelector('#toolbar').classList.add('airplane-mode');
+			}
+			else{
+				document.querySelector('#toolbar').classList.remove('airplane-mode');
+			}
+
+			
+		}
+		
+
+	</script>
+
+</head> 
+<body>
+	<header id="toolbar">
+		<div class="signal">AT&amp;T LTE</div>
+		<time>10:13PM</time>
+		<div class="battery">36%</div>
+	</header>
+
+	<ul class="ios-nav-list">
+		<li><img src="img/airplane.png" class="icon"><label>Airplane Mode <input id="airplane" type="checkbox" class="ios-switch" /><div></div></label></li>
+		<li><a href=""><img src="img/wifi.png" class="icon">Wi-Fi</a></li>
+		<li><a href=""><img src="img/bluetooth.png" class="icon">Bluetooth</a></li>
+	</ul>
+	<ul class="ios-nav-list">
+		<li><a href=""><span class="ios-icon"><img src="img/general.png" class="icon"><span class="count">1</span></span>General</a></li>
+		<li><a href=""><img src="img/sounds.png" class="icon">Sounds</a></li>
+		<li><a href=""><img src="img/bgwp.png" class="icon">Brightness &amp; Wallpaper</a></li>
+		<li><a href=""><img src="img/privacy.png" class="icon">Privacy</a></li>
+	</ul>		
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+:root input[type="checkbox"].ios-switch + div {
+	font-size: 130%; /* change this and see how they adjust! */
+	float: right;
+	margin-right: -60px;
+}
+
+/* Switch code ends here, from now on it’s just bling for the demo page */
+
+label {
+	position: relative;
+	display: inline-block;
+	padding: 0 ;
+	margin: 0 0 13px 0 ;
+	border-top-width: 0;
+	background: white;
+	font: bold 100% "Helvetica Neue";
+	width: 455px;
+}

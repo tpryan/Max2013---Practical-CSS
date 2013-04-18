@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+	<link rel="stylesheet" href="../background/css/main.css" type="text/css" media="screen" /> 
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+	<script>
+		function goToAirPlaneMode(){
+			document.querySelector('#toolbar').classList.add('airplane-mode');
+		}
+
+	</script>
+</head> 
+<body>
+	<header id="toolbar">
+		<div class="signal">AT&amp;T LTE</div>
+		<time>10:13PM</time>
+		<div class="battery">36%</div>
+	</header>
+
+
+	<button onclick="goToAirPlaneMode()">Airplane Mode</button>
+
+</body>
+</html>
