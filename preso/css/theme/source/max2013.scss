@@ -1,0 +1,281 @@
+/**
+ * Beige theme for reveal.js.
+ * 
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'Source San Pro';
+	src: url('../../lib/font/adobe/sourcesanspro-regular-webfont.eot');
+	src: url('../../lib/font/adobe/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/adobe/sourcesanspro-regular-webfont.woff') format('woff'),
+		 url('../../lib/font/adobe/sourcesanspro-regular-webfont.ttf') format('truetype'),
+		 url('../../lib/font/adobe/sourcesanspro-regular-webfont.svg#SourceCodePro') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'Source San Pro';
+	src: url('../../lib/font/adobe/sourcesanspro-it-webfont.eot');
+	src: url('../../lib/font/adobe/sourcesanspro-it-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/adobe/sourcesanspro-it-webfont.woff') format('woff'),
+		 url('../../lib/font/adobe/sourcesanspro-it-webfont.ttf') format('truetype'),
+		 url('../../lib/font/adobe/sourcesanspro-it-webfont.svg#SourceCodePro') format('svg');
+
+	font-weight: normal;
+	font-style: italid;
+}
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'Source San Pro Black';
+	src: url('../../lib/font/adobe/sourcesanspro-black-webfont.eot');
+	src: url('../../lib/font/adobe/sourcesanspro-black-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/adobe/sourcesanspro-black-webfont.woff') format('woff'),
+		 url('../../lib/font/adobe/sourcesanspro-black-webfont.ttf') format('truetype'),
+		 url('../../lib/font/adobe/sourcesanspro-black-webfont.svg#SourceCodeProBlack') format('svg');
+
+	font-weight: bold;
+	font-style: normal;
+}
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'Source Code Pro';
+	src: url('../../lib/font/adobe/sourcecodepro-regular-webfont.eot');
+	src: url('../../lib/font/adobe/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/adobe/sourcecodepro-regular-webfont.woff') format('woff'),
+		 url('../../lib/font/adobe/sourcecodepro-regular-webfont.ttf') format('truetype'),
+		 url('../../lib/font/adobe/sourcecodepro-regular-webfont.svg#SourceCodePro') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Source San Pro';
+	src: url('../../lib/font/adobe/sourcesanspro-bold-webfont.eot');
+	src: url('../../lib/font/adobe/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/adobe/sourcesanspro-bold-webfont.woff') format('woff'),
+		 url('../../lib/font/adobe/sourcesanspro-bold-webfont.ttf') format('truetype'),
+		 url('../../lib/font/adobe/sourcesanspro-bold-webfont.svg#SourceCodePro') format('svg');
+
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: #333;
+$headingColor: #333;
+$headingTextShadow: none;
+$backgroundColor: #d5e4fa;
+$linkColor: #00A4E4;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(79, 64, 28, 0.99);
+$heading1TextShadow: none;
+
+$mainFont: "Adobe Clean", "Source Sans Pro";
+$headingFont: "Adobe Clean", "Source San Pro Black";
+// $mainFont: "Source Sans Pro";
+// $headingFont: "Source San Pro Black";
+$mainFontSize: 36px;
+$headingTextTransform: none;
+
+
+// Background generator
+@mixin bodyBackground() {
+	background: url('max2013/bg.jpg');
+}
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+
+
+.reveal {
+
+
+	section{
+
+
+
+		
+		
+	}
+
+	p{
+		text-align: left;
+	}
+
+	h1{
+		font-size: 3rem;
+		text-align: left;
+		font-weight: bold;
+	}
+	h2{
+		font-size: 1.5rem;
+		color: #999;
+	}
+
+	img.transparent{
+		border: none;
+		background: none;
+		box-shadow: none;
+	}
+	ul{
+		width: 100%;
+		li{
+			font-size: 2.2rem;
+			list-style-image: url("max2013/bullet.svg");
+			ul{
+				li{
+					font-size: 1.8rem;
+					line-height: 1.3;
+					list-style: square;
+					list-style-image: url("max2013/bullet.svg");
+					ul{
+						li{
+							font-size: 1.3rem;
+							line-height: 1.8;
+							list-style: square;
+							list-style-image: url("max2013/bullet.svg");
+						}
+					}
+				}
+			}
+		}
+	}
+	ol{
+		width: 100%;
+		list-style: none;
+		counter-reset: item;
+		margin-left: 0;
+		li{
+			margin-left: 0;
+			&:before { 	
+	        	content: counter(item) ". "; 
+	        	counter-increment: item;
+	            color: #fbb034; 
+	        }
+		}
+	}	
+
+	code{
+		font-family: "Source Code Pro";
+	}
+
+	blockquote {
+		display: block;
+		position: relative;
+		width: 70%;
+		margin: 5px auto;
+		padding: 5px;
+
+		font-style: italic;
+		background: rgba(230, 230, 230, 0.7);
+		box-shadow: 1px 1px 4px rgba(0,0,0,.5);
+	}
+
+	
+
+	.content{
+		padding: 25px 10px;
+		height: 500px;
+	}
+
+	.content-with-bg{
+		padding: 25px 10px;
+		background-color: #FFFFFF;
+		height: 500px;
+		box-shadow: 1px 1px 4px rgba(0,0,0,.5);
+	}
+
+	.titleslide {
+		hgroup{
+			padding: .5em 1em;
+			//background-color: #FFFFFF;
+			text-align: left;
+			//box-shadow: 1px 1px 4px rgba(0,0,0,.5);
+		}
+
+		h1{
+			font-size: 1.8em;
+		}
+
+		h2{
+			font-size: 1em;
+		}
+
+		&:after{
+			content: "";
+			
+		}
+
+
+	}
+
+	dl{
+		font-size: 1.5em;
+		dd{
+			font-style: italic;
+			text-align: left;
+			margin: 30px 0 0 50px;
+			line-height: 1.3;
+		}
+		dt{
+			font-weight: bold;
+			text-align: left;
+		}
+	}
+
+
+}
+
+.adobelogo{
+	right: 17%;
+	position: absolute;
+}
+
+#bird{
+	position: absolute;
+	width: 400px;
+	bottom: -100px;
+	right: -200px;
+}
+#logo{
+	margin-top: -50px;
+}
+
+.question{
+	h1{
+		font-size:  3em;
+		line-height: 1.5;
+		text-align: center;
+	}
+}
+
+.mneumonic-large{
+	width: 400px;
+	-webkit-filter: drop-shadow(5px 5px 7px #666);
+}
