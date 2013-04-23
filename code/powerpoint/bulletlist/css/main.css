@@ -1,0 +1,31 @@
+body{
+	font-size: 2em;
+}
+
+.wrongway li{
+	color: #FF0000;
+}
+
+.wrongway li span{
+	color: #000000;
+}
+
+.arightway{
+	list-style: none;
+}
+
+.arightway li:before{
+	content: "*";
+	color: #FF0000;	
+	display: inline-block;
+	width:30px;
+	margin-left: -30px;
+	vertical-align: center;
+	position:relative;
+	top:5px;
+}
+
+
+.alsorightway li{
+	list-style-image: url("redbullet.svg");
+}
