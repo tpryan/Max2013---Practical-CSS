@@ -1,0 +1,30 @@
+body{
+	font-size: 2em;
+	font-family: "Source Sans Pro";
+}
+
+ul{
+	list-style: none;
+	padding-left: 0;
+}
+
+
+nav, aside{
+	width: 25%;
+	float: left;
+
+}
+
+.content{
+	width: 48%;
+	float: left;
+	padding: 0 20px;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
