@@ -75,12 +75,14 @@ h2{
 }
 
 .chathead-multiple:hover {
-	 overflow: visible;
-	 border: none;
-	 border-radius: 0;
-	 width: 150px;
-	 height: auto;
-	 box-shadow: none;
+	display: block;
+	overflow: visible;
+	border: none;
+	border-radius: 0;
+	width: 150px;
+	height: auto;
+	box-shadow: none;
+	-webkit-shape-outside: none;
 }
 
 .chathead-multiple:hover img{
@@ -93,6 +95,8 @@ h2{
 	box-shadow: 1px 1px 5px rgba(0,0,0,.5);
 	margin-bottom: 10px;
 	margin-right: 0;
+	float: right;
+	-webkit-shape-outside: circle(50%, 50%, 50%);
 }
 
 
