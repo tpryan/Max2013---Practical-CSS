@@ -1,8 +1,98 @@
-.chathead{
-	width: 100px;
-	border-radius: 80px;
-	border: 4px solid #999;
-	box-shadow: 2px 2px 5px rgba(0,0,0,.7);
-	position: absolute;
-	right: 10px;	
+h2{
+	clear:both;
 }
+
+.chathead{
+	width: 150px;
+	height: 150px;
+	border-radius: 90px;
+	border: 4px solid #FFFFFF;
+	box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+	position: absolute;
+	right: -10px;
+	margin-left: 0;	
+}
+
+.chathead-multiple{
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+	border: 4px solid #FFFFFF;
+	box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+	right: -10px;
+	overflow: hidden;
+	float:right;
+	position: relative;
+	margin-right: -10px;	
+}
+
+.chathead-multiple img{
+	display: none;
+	margin: 0;
+
+}
+
+.chathead-multiple img:nth-child(-n+3) {
+   display: block;
+   width: 75px;
+   height: 75px;
+}
+
+.chathead-multiple img:first-child {
+   display: block;
+   width: 150px;
+   height: 150px;
+   position: absolute;
+   left: -75px;
+   border-right: 1px solid #FFFFFF;
+}
+
+.chathead-multiple img:nth-child(2) {
+   display: block;
+   width: 75px;
+   height: 75px;
+   position: absolute;
+   left: 75px;
+   top:0;
+   border-bottom: 1px solid #FFFFFF;
+   border-left: 1px solid #FFFFFF;
+}
+
+.chathead-multiple img:nth-child(3) {
+   display: block;
+   width: 75px;
+   height: 75px;
+   position: absolute;
+   left: 75px;
+   bottom:0;
+   border-top: 1px solid #FFFFFF;
+   border-left: 1px solid #FFFFFF;
+}
+
+
+.chathead-multiple{
+	 -webkit-shape-outside: circle(50%, 50%, 50%);
+}
+
+.chathead-multiple:hover {
+	 overflow: visible;
+	 border: none;
+	 border-radius: 0;
+	 width: 150px;
+	 height: auto;
+	 box-shadow: none;
+}
+
+.chathead-multiple:hover img{
+	display: block;
+	height: 150px;
+	width: 150px;
+	position: static;
+	border-radius: 90px;
+	border: 4px solid #FFFFFF;
+	box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+	margin-bottom: 10px;
+	margin-right: 0;
+}
+
+
