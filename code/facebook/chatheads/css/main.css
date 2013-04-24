@@ -24,12 +24,14 @@ h2{
 	float:right;
 	position: relative;
 	margin-right: -10px;
+	z-index: 10;
 
 }
 
 .chathead-multiple img{
 	display: none;
 	margin: 0;
+	z-index: 1;
 }
 
 .chathead-multiple img:nth-child(-n+3) {
