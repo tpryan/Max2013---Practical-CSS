@@ -23,13 +23,13 @@ h2{
 	overflow: hidden;
 	float:right;
 	position: relative;
-	margin-right: -10px;	
+	margin-right: -10px;
+
 }
 
 .chathead-multiple img{
 	display: none;
 	margin: 0;
-
 }
 
 .chathead-multiple img:nth-child(-n+3) {
@@ -72,6 +72,7 @@ h2{
 
 .chathead-multiple{
 	 -webkit-shape-outside: circle(50%, 50%, 50%);
+
 }
 
 .chathead-multiple:hover {
