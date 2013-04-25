@@ -79,6 +79,45 @@
 
 				</section>
 
+				<style>
+					.col33{
+						width: 33%;
+						height: 200px;
+						float: left;
+						display: inline-block;
+						text-align: left;
+					}
+					.a{
+						background-color: #FF0000;
+					}
+					.b{
+						background-color: #00FF00;
+					}
+					.c{
+						background-color: #0000FF;
+					}
+					.reveal .split-screen{
+						width: 45%;
+						margin-right: 20px;
+						float: left;
+
+					}
+					.reveal .regularbox{
+						padding: 0 10px;
+					}
+					.reveal .borderbox{
+						 -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+					}
+					.reveal .with-background{
+						background-color: #CC00CC;
+						height: auto;
+					}
+					.reveal .clearfix:after{
+						content: "";
+						display: table;
+						clear: both;
+					}
+				</style>
 				<section>
 					<section class="question">
 						<div class="content">
@@ -87,7 +126,190 @@
 					</section>
 					<section class="question">
 						<div class="content">
-							<h1>Concepts</h1>
+							<div class="col33 a">
+								Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 
+							</div>
+							<div class="col33 b">
+								Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 
+							</div>	
+							<div class="col33 c">
+								Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 
+							</div>		
+						</div>	
+					</section>
+
+					<section>
+						<pre class="split-screen"><code contenteditable>
+&lt;div class="col33 a"&gt;
+	Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 
+&lt;/div&gt;
+&lt;div class="col33 b"&gt;
+	Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 
+&lt;/div&gt;	
+&lt;div class="col33 c"&gt;
+	Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 
+&lt;/div&gt;	
+
+
+
+
+							
+						</code></pre>
+						<pre class="split-screen"><code contenteditable>
+.col33{
+	width: 33%;
+	height: 200px;
+	float: left;
+	display: inline-block;
+}
+.a{
+	background-color: #FF0000;
+}
+.b{
+	background-color: #00FF00;
+}
+.c{
+	background-color: #0000FF;
+}
+							
+						</code></pre>
+					</section>
+					<section>
+						<pre class="split-screen"><code contenteditable>
+&lt;div class="col33 a"&gt;
+	Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 
+&lt;/div&gt;
+&lt;div class="col33 b"&gt;
+	Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 
+&lt;/div&gt;	
+&lt;div class="col33 c"&gt;
+	Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 
+&lt;/div&gt;	
+
+
+
+
+							
+						</code></pre>
+						<pre class="split-screen"><code contenteditable>
+.col33{
+	width: 33%;
+	height: 200px;
+	float: left;
+	display: inline-block;
+	<strong>padding: 0 10px;</strong>
+}
+.a{
+	background-color: #FF0000;
+}
+.b{
+	background-color: #00FF00;
+}
+.c{
+	background-color: #0000FF;
+}
+							
+						</code></pre>
+					</section>
+					<section>
+						<div class="content">
+							<div class="col33 a regularbox">
+								Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 
+							</div>
+							<div class="col33 b regularbox" >
+								Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 
+							</div>	
+							<div class="col33 c regularbox">
+								Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 
+							</div>		
+						</div>	
+					</section>
+					<section>
+						<div class="content">
+							<div class="col33 a regularbox borderbox">
+								Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 
+							</div>
+							<div class="col33 b regularbox borderbox" >
+								Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 
+							</div>	
+							<div class="col33 c regularbox borderbox">
+								Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 
+							</div>		
+						</div>	
+					</section>
+					<section>
+						<div class="content">
+							<pre><code contenteditable>
+.borderbox{
+ 	-moz-box-sizing: border-box; 
+ 	-webkit-box-sizing: border-box; 
+ 	box-sizing: border-box;
+}
+							
+						</code></pre>
+						</div>
+					</section>
+					<section>
+						<figure>
+							<img src="img/widthbox.png" height="500">
+							<figcaption>Taken from <a href="http://css-tricks.com/box-sizing/">CSS Tricks</a></figcaption>
+						</figure>
+					</section>	
+					<section>
+						<div class="content with-background">
+							<div class="col33 a regularbox borderbox">
+								Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 
+							</div>
+							<div class="col33 b regularbox borderbox" >
+								Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 
+							</div>	
+							<div class="col33 c regularbox borderbox">
+								Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 
+							</div>
+
+						</div>	
+					</section>
+					<section>
+						<div class="content with-background clearfix">
+							<div class="col33 a regularbox borderbox">
+								Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 
+							</div>
+							<div class="col33 b regularbox borderbox" >
+								Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 
+							</div>	
+							<div class="col33 c regularbox borderbox">
+								Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 
+							</div>
+
+						</div>	
+					</section>
+					<section>
+						<pre class="split-screen"><code contenteditable>
+&lt;div class="clearfix"&gt;
+	&lt;div class="col33 a" /&gt;
+	&lt;div class="col33 b" /&gt;
+	&lt;div class="col33 c" /&gt;
+&lt;/div&gt;
+
+							
+						</code></pre>
+						<pre class="split-screen"><code contenteditable>
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+							
+						</code></pre>
+					</section>
+					<section>
+						<h1>Concepts</h1>
+						<div class="content">
+							<ul>
+								<li class="fragment">Border Box <br /><a href="http://css-tricks.com/box-sizing/">More Info</a></li>
+								<li class="fragment">Clearfix <br /><a href="http://css-tricks.com/snippets/css/clear-fix/">More Info</a></li>
+							</ul>	
 						</div>	
 					</section>
 				</section>
@@ -97,12 +319,33 @@
 							<h1>Powerpoint</h1>
 						</div>	
 					</section>
+					<section>
+						<div class="content">
+							<img src="img/ppt.png" />
+						</div>	
+					</section>
 					<section class="question">
 						<div class="content">
-							<h1>Concepts</h1>
+							<a href="../code/powerpoint/bulletlist/" target="_new">Let's try that</a>
+						</div>	
+					</section>
+					<section>
+						<h1>Concepts</h1>
+						<div class="content">
+							<ul>
+								<li class="fragment">Psuedo Elements<br /><a href="http://coding.smashingmagazine.com/2011/07/13/learning-to-use-the-before-and-after-pseudo-elements-in-css/">More Info</a></li>
+								<li class="fragment">HTML Entities in CSS<br /><a href="http://www.evotech.net/blog/2007/04/named-html-entities-in-numeric-order/">More Info</a></li>
+								<li class="fragment">SVG <br /><a href="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/getting-started-with-scalable-vector-graphics-svg/">More Info</a></li>
+							</ul>	
 						</div>	
 					</section>
 				</section>
+
+
+				
+
+
+
 				<section>
 					<section class="question">
 						<div class="content">
