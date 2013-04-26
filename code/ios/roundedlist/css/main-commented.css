@@ -1,44 +1,53 @@
 
 .ios-nav-list{
+/*
 	margin: 0 20px;
 	list-style: none;
 	font-family: "Helvetica Neue";
 	font-weight: bold;
 	padding-left: 0;
 	padding-top: 20px;
+*/
 
 }
 
 
 .ios-nav-list li{
+/*
 	border: 1px solid #CCC;
 	border-bottom: none;
 	line-height: 1.8;
 	font-size: 36px;
 	background-color: #FFFFFF;
+*/
 	
 }
 
 .ios-nav-list li:first-child{
-	border-radius: 10px 10px 0 0;
+/*	border-radius: 10px 10px 0 0;*/
 }
 
 .ios-nav-list li:last-child{
+/*
 	border-radius: 0 0 10px 10px;
 	border-bottom: 1px solid #CCC;
+*/
 }
 
 
 .ios-nav-list li a{
+/*
 	text-decoration: none;
 	color: #000000;
 	display: inline-block;
 	width: 100%;
+*/
 
 }
 
 
 .ios-nav-list li a:after{
+/*
 	content: "\203A";
 	float: right;
 	color: #666;
@@ -46,16 +55,21 @@
 	font-weight: normal;
 	font-size: 250%;
 	line-height: .8;
+*/
 }
 
+
 .ios-nav-list li .icon{
+/*
 	width: 58px;
 	height: 58px;
 	vertical-align: middle;
 	margin: 0 8px 0 5px;
+*/
 }  
 
 .ios-nav-list li a:hover{
+/*
 	color: #FFFFFF;
 	background-color: #0000FF;
 	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #798DFF),color-stop(1, #0000ff));
@@ -65,16 +79,17 @@
 	background-image: -o-linear-gradient(top, #798DFF, #0000ff);
 	background-image: linear-gradient(top, bottom, #798DFF, #0000ff);
 
+*/
 }
 
 .ios-nav-list li:first-child a{
-	border-radius: 7px 7px 0 0;
+/*	border-radius: 7px 7px 0 0;*/
 }
 .ios-nav-list li:last-child a{
-	border-radius: 0 0 7px 7px;
+/*	border-radius: 0 0 7px 7px;*/
 }  
 
 .ios-nav-list li a:hover:after{
-	color: #FFFFFF;
+/*	color: #FFFFFF;*/
 
 }
