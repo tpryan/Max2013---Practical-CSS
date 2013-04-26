@@ -1,94 +1,13 @@
 <!DOCTYPE html> 
 <html> 
 	<head> 
-	<title>Practical CSS - Chatheads</title>
-       <style>
-            .chathead-interface {
-                  right: -10px;
-                  position: absolute;
-                  width: 150px;
-                  height: 180px;
-            }
-
-
-
-            .chathead-multiple{
-                  width: 150px;
-                  height: 150px;
-                  border-radius: 75px;
-                  border: 4px solid #FFFFFF;
-                  box-shadow: 1px 1px 5px rgba(0,0,0,.5);
-                  overflow: hidden;
-                  position: absolute;
-                  z-index: 10;
-
-            }
-            .chathead-multiple img{
-                  display: none;
-                  margin: 0;
-                  z-index: 1;
-            }
-            .chathead-multiple img:nth-child(-n+3) {
-               display: block;
-               width: 75px;
-               height: 75px;
-               display: inline-block;
-               position: absolute;
-            }
-            .chathead-multiple img:first-child {
-               width: 150px;
-               height: 150px;
-               left: -75px;
-               border-right: 1px solid #FFFFFF;
-            }
-            .chathead-multiple img:nth-child(2) {
-               left: 75px;
-               top:0;
-               border-bottom: 1px solid #FFFFFF;
-               border-left: 1px solid #FFFFFF;
-               border-radius: 0 75px 0  0;
-            }
-            .chathead-multiple img:nth-child(3) {
-               left: 75px;
-               bottom:0;
-               border-top: 1px solid #FFFFFF;
-               border-left: 1px solid #FFFFFF;
-               border-radius: 0 0 75px 0;
-            }
-            .chathead-interface .expand{
-                  position: absolute;
-                  display: inline-block;
-                  left: 0;
-                  top: 0;
-                  z-index: 100;
-                  border: 1px solid #444;
-                  padding: 3px 5px;
-                  border-radius: 5px;
-                  font-weight: bold;
-                  text-decoration: none;
-                  color: #444;
-                  background-color: rgba(255,255,255,.7)
-            }   
-
-            .chathead-single{
-                  width: 150px;
-                  height: 150px;
-                  border-radius: 75px;
-                  border: 4px solid #FFFFFF;
-                  box-shadow: 1px 1px 5px rgba(0,0,0,.5);
-                  position: relative;
-                  margin-left: 0;   
-            }   
-
-            
-
-      </style>
+	<title>Practical CSS - Multiple Chatheads with Expansion</title>
+      <link rel="stylesheet" href="css/multiple-expand.css" type="text/css" media="screen" />
 
       <script>
             document.addEventListener('DOMContentLoaded', function() {
-                  $expand = document.querySelector('.expand');
-                  $expand.addEventListener('click', handleClick, false);
-
+                  $ch = document.querySelector('.chathead-holder');
+                  $ch.addEventListener('click', handleClick, false);
             });
 
             function handleClick(e){
@@ -102,9 +21,6 @@
                   [].forEach.call( document.querySelectorAll('.chathead-holder img'), function(el) {
                   el.classList.toggle('chathead-single');
                   });
- 
-   
- 
             }
 
       </script>
@@ -114,15 +30,13 @@
       
 	<div class="content">
             <h2>The Main Thing</h2>
-            <div class="chathead-interface">
-                  <a href="" class="expand">+</a>
-                  <div class="chathead-multiple chathead-holder">
-                        <img src="img/tpryan.png">
-                        <img src="img/jonesbey.png">
-                        <img src="img/mcorlan.png">
-                        <img src="img/khoyt.png">
-                  </div>
-            </div> 
+            
+            <div class="chathead-multiple chathead-holder">
+                <img src="img/tpryan.png">
+                <img src="img/jonesbey.png">
+                <img src="img/mcorlan.png">
+                <img src="img/khoyt.png">
+            </div>
 		
 		<p>DIY ea nulla photo booth tempor occaecat, velit nihil mixtape scenester. 
             Irony laboris echo park, wolf officia vice cupidatat labore butcher freegan 
