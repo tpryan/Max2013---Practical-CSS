@@ -23,6 +23,11 @@
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+
+			// if (location.hostname == "max2013.dev" && navigator.userAgent.indexOf("Chrome") >= 0 ){
+			// 	alert("You want to open this up in Safari, so you Chrome doesn't get messed up.");
+			// }
+
 		</script>
 
 		<!--[if lt IE 9]>
@@ -76,6 +81,16 @@
 							</dl>	
 						</div>	
 					</section>
+					<section class="question">
+						<div class="content">
+							<h1>Avoid adding extra HTML</h1>
+						</div>	
+					</section>
+					<section class="question">
+						<div class="content">
+							<h1>Prefer using CSS for all display</h1>
+						</div>	
+					</section>
 
 				</section>
 
@@ -84,7 +99,6 @@
 						width: 33%;
 						height: 200px;
 						float: left;
-						display: inline-block;
 						text-align: left;
 					}
 					.a{
@@ -92,9 +106,11 @@
 					}
 					.b{
 						background-color: #00FF00;
+						color: #999999;
 					}
 					.c{
 						background-color: #0000FF;
+						color: #FFFFFF;
 					}
 					.reveal .split-screen{
 						width: 45%;
@@ -120,9 +136,36 @@
 				</style>
 				<section>
 					<section class="question">
-						<div class="content">
 							<h1>Columns</h1>
-						</div>	
+							<img src="img/columns.jpg" />
+					</section>
+					<style>
+						.flexible-grid{
+							width: 100%;
+						}
+						.flexible-grid td{
+							border: 1px solid #999;
+							width: 12%;
+							height: 400px;
+							background-color: rgba(200,200,200,.4);
+						}
+					</style>
+					<section>
+						<h1>Flexible Grid</h1>
+						<div class="content">
+							<table class="flexible-grid">
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>	
+						</div>					
 					</section>
 					<section class="question">
 						<div class="content">
@@ -141,13 +184,13 @@
 					<section>
 						<pre class="split-screen"><code contenteditable>
 &lt;div class="col33 a"&gt;
-	Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 
+	Col1 Col1 Col1 Col1  
 &lt;/div&gt;
 &lt;div class="col33 b"&gt;
-	Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 
+	Col2 Col2 Col2 Col2 
 &lt;/div&gt;	
 &lt;div class="col33 c"&gt;
-	Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 
+	Col3 Col3 Col3 Col3 
 &lt;/div&gt;	
 
 
@@ -160,30 +203,41 @@
 	width: 33%;
 	height: 200px;
 	float: left;
-	display: inline-block;
 }
-.a{
-	background-color: #FF0000;
-}
-.b{
-	background-color: #00FF00;
-}
-.c{
-	background-color: #0000FF;
-}
+
+
+
+
+
+
+
+
 							
 						</code></pre>
+					</section>
+					<section class="question">
+						<div class="content">
+							<div class="col33 a">
+								Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 
+							</div>
+							<div class="col33 b">
+								Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 
+							</div>	
+							<div class="col33 c">
+								Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 
+							</div>		
+						</div>	
 					</section>
 					<section>
 						<pre class="split-screen"><code contenteditable>
 &lt;div class="col33 a"&gt;
-	Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 Col1 
+	Col1 Col1 Col1 Col1 
 &lt;/div&gt;
 &lt;div class="col33 b"&gt;
-	Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 Col2 
+	Col2 Col2 Col2 Col2  
 &lt;/div&gt;	
 &lt;div class="col33 c"&gt;
-	Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 
+	Col3 Col3 Col3 Col3  
 &lt;/div&gt;	
 
 
@@ -196,18 +250,18 @@
 	width: 33%;
 	height: 200px;
 	float: left;
-	display: inline-block;
 	<strong>padding: 0 10px;</strong>
 }
-.a{
-	background-color: #FF0000;
-}
-.b{
-	background-color: #00FF00;
-}
-.c{
-	background-color: #0000FF;
-}
+
+
+
+
+
+
+
+
+
+
 							
 						</code></pre>
 					</section>
@@ -223,6 +277,14 @@
 								Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 Col3 
 							</div>		
 						</div>	
+					</section>
+					<section>
+						<div class"content">
+							<figure>
+								<img src="img/balloonexplosion.jpg">
+								<figcaption>Float?</figcaption>
+							</figure>
+						</div>
 					</section>
 					<section>
 						<div class="content">
@@ -344,13 +406,77 @@
 				</section>
 				<section>
 					<section class="question">
-						<div class="content">
 							<h1>Powerpoint</h1>
-						</div>	
+							<img src="img/powerpoint.png" width="300" />
 					</section>
 					<section>
 						<div class="content">
 							<img src="img/ppt.png" />
+						</div>	
+					</section>
+					<section class="question">
+						<div class="content">
+							<h1>Psuedo Elements</h1>
+						</div>	
+					</section>
+					<section>
+						
+						<pre class="split-screen"><code contenteditable>
+&lt;div class="psuedotest"&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
+
+
+
+
+
+
+							
+						</code></pre>
+						<style>
+							.reveal .bordered{
+								border: 1px solid red;
+							}
+						</style>
+						<div class="split-screen fragment bordered">
+							<p>Pithy Quote</p>
+
+						</div>
+					</section>
+					<section>
+						
+						<pre class="split-screen"><code contenteditable>
+&lt;div class="psuedotest"&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
+
+.psuedotest:before, 
+.psuedotest:after{
+	border: 1px solid green;
+	display: inline-block;
+	content: "#";
+}
+							
+						</code></pre>
+						<style>
+							.reveal .bordered{
+								border: 1px solid red;
+							}
+							.reveal .psuedotest:before,.reveal .psuedotest:after{
+								border: 1px solid green;
+								display: inline-block;
+								content: "#";
+							}
+						</style>
+						<div class="split-screen fragment bordered psuedotest">
+							<p>Pithy Quote</p>
+
+						</div>
+					</section>
+
+					<section class="question">
+						<div class="content">
+							<h1>Character Entities</h1>
 						</div>	
 					</section>
 					<section>
@@ -396,9 +522,8 @@
 
 				<section>
 					<section class="question">
-						<div class="content">
-							<h1>Facebook</h1>
-						</div>	
+						<h1>Facebook</h1>
+						<img src="img/facebook.jpg" width="500"/>
 					</section>
 					<section>
 						<div class="content">
@@ -431,9 +556,8 @@
 				</section>
 				<section>
 					<section class="question">
-						<div class="content">
-							<h1>iOS</h1>
-						</div>	
+						<h1>iOS</h1>	
+						<img src="img/ios-family-2013.png" width="500" />
 					</section>
 					<section>
 						<div class="content">
@@ -449,12 +573,6 @@
 					</section>
 					<section>
 						<div class="content">
-							<img src="img/ios-settings.png" />
-							<img src="img/ios-toggle.png"  style="vertical-align:top" class="fragment" />
-						</div>	
-					</section>
-					<section>
-						<div class="content">
 							<img src="img/ios-home.png" />
 							<img src="img/ios-badge.png"  style="vertical-align:top" class="fragment" />
 						</div>	
@@ -465,11 +583,211 @@
 							<img src="img/ios-airplane.png"  style="vertical-align:top" class="fragment" />
 						</div>	
 					</section>
+					<section class="question">
+						<div class="content">
+							<h1>CSS Patterns</h1>
+						</div>	
+					</section>
+					<section>
+						
+						<pre class="split-screen"><code contenteditable>
+&lt;div class="pattern"&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
+
+
+background: #F00;
+
+
+
+							
+						</code></pre>
+						<style>
+							.reveal .patterned{
+								background: #F00;
+							}
+
+						</style>
+						<div class="split-screen fragment" style="background: #F00">
+							<p class="patterned">Pithy Quote</p>
+
+						</div>
+					</section>
+					<section>
+						
+						<pre class="split-screen"><code contenteditable>
+&lt;div class="pattern"&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
+
+
+background: 
+linear-gradient(#0FF,#F0F);
+
+
+
+							
+						</code></pre>
+						<div class="split-screen fragment" style="background: -webkit-linear-gradient(#0FF,#F0F)">
+							<p>Pithy Quote</p>
+
+						</div>
+					</section>
+					<section>
+						
+						<pre class="split-screen"><code contenteditable>
+&lt;div class="pattern"&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
+
+
+background: 
+linear-gradient(#0FF,#F0F);
+background-size:5px 5px; 
+
+
+							
+						</code></pre>
+						<div class="split-screen fragment" style="background-size:5px 5px; background: -webkit-linear-gradient(#0FF,#F0F)">
+							<p>Pithy Quote</p>
+
+						</div>
+					</section>
+					<section>
+						<pre class="split-screen"><code contenteditable>
+&lt;div class="pattern"&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
+
+
+background: 
+linear-gradient(#0FF 10px,#F0F);
+background-size:12px 12px;
+
+
+							
+						</code></pre>
+						<div class="split-screen fragment" style="background-size:12px 12px; background: -webkit-linear-gradient(#0FF 10px,#F0F)">
+							<p>Pithy Quote</p>
+
+						</div>
+					</section>
+					<section class="question">
+						<a href="http://lea.verou.me/css3patterns/"><img src="img/css-gallery.png" target="_blank" /></a>
+					</section>
+
+					<section class="question">
+						<div class="content">
+							<h1>CSS Transitions</h1>
+						</div>	
+					</section>
+
+					<section>
+						<pre class="split-screen"><code contenteditable>
+&lt;script&gt;
+function toggleOpacity(){
+	Set to 1 or 0
+}
+function toggleMargin(){
+	Set to 140 or 0
+}
+&lt;/script&gt;
+&lt;p id="trans1"&gt;Pithy Quote&lt;/p&gt;
+&lt;button onclick="toggleOpacity()"&gt;
+	Opacity
+&lt;/button&gt;
+&lt;button onclick="toggleMargin()"&gt;
+	Margin
+&lt;/button&gt;
+
+
+							
+						</code></pre>
+						<script>
+							function toggleOpacity1(){
+								var el = document.querySelector('#trans1');
+								if (el.style.opacity != 0 || el.style.opacity == ""){
+									el.style.opacity = 0;
+								}
+								else{
+									el.style.opacity = 1;
+								}
+							}
+							function toggleMargin1(){
+								var el = document.querySelector('#trans1');
+								if (el.style.marginTop == "" || el.style.marginTop == "0px"){
+									el.style.marginTop = "100px";
+								}
+								else{
+									el.style.marginTop = "0px";
+								}
+							}
+						</script>
+						<div class="split-screen fragment">
+							<p id="trans1">Pithy Quote</p>
+							<button onclick="toggleOpacity1()">Opacity</button>
+							<button onclick="toggleMargin1()">Margin</button>
+						</div>
+
+					</section>
+					<section>
+						<pre class="split-screen"><code contenteditable>
+transition: all 1s ease-in-out;
+
+&lt;p id="trans1"&gt;Pithy Quote&lt;/p&gt;
+&lt;button onclick="toggleOpacity()"&gt;
+	Opacity
+&lt;/button&gt;
+&lt;button onclick="toggleMargin()"&gt;
+	Margin
+&lt;/button&gt;
+
+
+							
+						</code></pre>
+						<style>
+							#trans2{
+								-webkit-transition: all 1s ease-in-out;
+
+							}
+
+						</style>
+						<script>
+							function toggleOpacity2(){
+								var el = document.querySelector('#trans2');
+								if (el.style.opacity != 0 || el.style.opacity == ""){
+									el.style.opacity = 0;
+								}
+								else{
+									el.style.opacity = 1;
+								}
+							}
+							function toggleMargin2(){
+								var el = document.querySelector('#trans2');
+								if (el.style.marginTop == "" || el.style.marginTop == "0px"){
+									el.style.marginTop = "100px";
+								}
+								else{
+									el.style.marginTop = "0px";
+								}
+							}
+						</script>
+						<div class="split-screen fragment">
+							<p id="trans2">Pithy Quote</p>
+							<button onclick="toggleOpacity2()">Opacity</button>
+							<button onclick="toggleMargin2()">Margin</button>
+						</div>
+
+					</section>
+
+
+
+
 					<section>
 						<h1>Concepts</h1>
 						<div class="content">
 							<ul>
-								<li class="fragment">Background Gradients<br /><a href="http://css-tricks.com/almanac/properties/b/border-radius/">More Info</a></li>
+								<li class="fragment">CSS Patterns<br /><a href="http://lea.verou.me/css3patterns/">More Info</a></li>
 								<li class="fragment">CSS Transitions<br /><a href="http://css3.bradshawenterprises.com/">More Info</a></li>
 							</ul>	
 						</div>	
@@ -491,26 +809,26 @@
 					</section>
 					<section class="question">
 						<div class="content">
-							<h1>CSS is for presentation.</h1>
+							<h1>CSS is for <br />presentation.</h1>
 						</div>	
 					</section>
 					<section class="question">
 						<div class="content">
-							<h1>It can handle most of what you throw at it..</h1>
+							<h1>It can handle what you throw at it.</h1>
 						</div>	
 					</section>
 
 					<section>
 						<h1>Questions?</h1>
 						<div class="content-with-bg">
-							<p>Preso availalble at:</p>
+							<p>Source, Presentation &amp; References:</p>
 							<ul>
-								<li><a href="http://terrenceryan.com/max2013/practicalcss/preso">http://terrenceryan.com/max2013/practicalcss/preso</a></li>
-								<li><a href="http://terrenceryan.com/max2013/practicalcss/preso">Adobe Max Site</a></li>
+								<li><a href="http://bit.ly/max-tr-1">http://bit.ly/max-tr-1</a></li>
 							</ul>
-							<p>Code availalble at:</p>
+							<br /><br />	
+							<p>Preso also availalble at:</p>
 							<ul>
-								<li><a href="http://github.com/tpryan">http://github.com/tpryan</a></li>
+								<li><a href="http://max.adobe.com">Adobe Max Site</a></li>
 							</ul>
 							<br /><br />
 							<p>Contact Me?</p>

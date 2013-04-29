@@ -1,4 +1,5 @@
 .chathead-multiple{
+/*
       width: 150px;
       height: 150px;
       border-radius: 75px;
@@ -10,41 +11,53 @@
       margin-right: -10px;
       z-index: 10;
 
+*/
 }
 
 .chathead-multiple img{
+/*
       display: none;
       margin: 0;
       z-index: 1;
+*/
 }
 
 .chathead-multiple img:nth-child(-n+3) {
+/*
+   display: block;
    width: 75px;
    height: 75px;
    display: inline-block;
    position: absolute;
+*/
 }
 
 .chathead-multiple img:first-child {
+/*
    width: 150px;
    height: 150px;
    left: -75px;
    border-right: 1px solid #FFFFFF;
+*/
 }
 
 
 .chathead-multiple img:nth-child(2) {
+/*
    left: 75px;
    top:0;
    border-bottom: 1px solid #FFFFFF;
    border-left: 1px solid #FFFFFF;
    border-radius: 0 75px 0  0;
+*/
 }
 
 .chathead-multiple img:nth-child(3) {
+/*
    left: 75px;
    bottom:0;
    border-top: 1px solid #FFFFFF;
    border-left: 1px solid #FFFFFF;
    border-radius: 0 0 75px 0;
+*/
 }

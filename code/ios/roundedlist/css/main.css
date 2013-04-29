@@ -6,12 +6,13 @@
 	font-weight: bold;
 	padding-left: 0;
 	padding-top: 20px;
+    
 
 }
 
 
 .ios-nav-list li{
-	border: 1px solid #CCC;
+	border: 2px solid #CCC;
 	border-bottom: none;
 	line-height: 1.8;
 	font-size: 36px;
@@ -20,11 +21,11 @@
 }
 
 .ios-nav-list li:first-child{
-	border-radius: 10px 10px 0 0;
+	border-radius: 15px 15px 0 0;
 }
 
 .ios-nav-list li:last-child{
-	border-radius: 0 0 10px 10px;
+	border-radius: 0 0 15px 15px;
 	border-bottom: 1px solid #CCC;
 }
 
@@ -34,6 +35,7 @@
 	color: #000000;
 	display: inline-block;
 	width: 100%;
+    vertical-align:bottom;
 
 }
 
@@ -45,14 +47,15 @@
 	padding-right: 5px;
 	font-weight: normal;
 	font-size: 250%;
-	line-height: .8;
+	line-height: .9;
 }
+
 
 .ios-nav-list li .icon{
 	width: 58px;
 	height: 58px;
 	vertical-align: middle;
-	margin: 0 8px 0 5px;
+	margin: 12px;
 }  
 
 .ios-nav-list li a:hover{
@@ -68,10 +71,10 @@
 }
 
 .ios-nav-list li:first-child a{
-	border-radius: 7px 7px 0 0;
+	border-radius: 14px 14px 0 0;
 }
 .ios-nav-list li:last-child a{
-	border-radius: 0 0 7px 7px;
+	border-radius: 0 0 14px 14px;
 }  
 
 .ios-nav-list li a:hover:after{
