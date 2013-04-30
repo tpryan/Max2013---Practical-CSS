@@ -414,6 +414,7 @@
 							<img src="img/ppt.png" />
 						</div>	
 					</section>
+					
 					<section class="question">
 						<div class="content">
 							<h1>Psuedo Elements</h1>
@@ -504,12 +505,144 @@
 					</section>
 
 					<section>
+						<div class="content">
+							<img src="img/ppt-cropping.png" />
+						</div>	
+					</section>
+
+					<section>
+						<h1>Static</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
+
+position: static;
+top:30px;
+
+
+
+
+							
+						</code></pre>
+
+						<style>
+							.reveal .static{
+								border: 1px solid green;
+								position: static;
+								top:30px;
+								background-color: rgba(255,255,255,.5);
+							}
+						</style>
+						<div class="split-screen fragment bordered">
+							<p class="static">Pithy Quote</p>
+
+						</div>
+					</section>
+					<section>
+						<h1>Relative</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
+
+position: relative;
+top:30px;
+
+
+
+
+							
+						</code></pre>
+
+						<style>
+							.reveal .relative{
+								border: 1px solid green;
+								position: relative;
+								top:30px;
+								background-color: rgba(255,255,255,.5);
+							}
+						</style>
+						<div class="split-screen fragment bordered">
+							<p class="relative">Pithy Quote</p>
+
+						</div>
+					</section>
+					<section>
+						<h1>Absolute</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
+
+position: absolute;
+top:130px;
+
+
+
+
+							
+						</code></pre>
+
+						<style>
+							.reveal .absolute{
+								border: 1px solid green;
+								position: absolute;
+								top:130px;
+								background-color: rgba(255,255,255,.5);
+							}
+						</style>
+						<div class="split-screen fragment bordered">
+							<p class="absolute">Pithy Quote</p>
+
+						</div>
+					</section>
+					<section>
+						<h1>Fixed</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
+
+position: fixed;
+top:130px;
+
+
+
+
+							
+						</code></pre>
+
+						<style>
+							.reveal .fixed{
+								border: 1px solid green;
+								position: fixed;
+								top:0;
+								right: 0;
+								background-color: rgba(255,255,255,.5);
+							}
+						</style>
+						<div class="split-screen fragment bordered">
+							<p class="fixed">Pithy Quote</p>
+
+						</div>
+					</section>
+
+					<section class="question">
+						<h1>Why it no work?</h1>
+					</section>
+					<section class="question">
+						<h1>Reveal.js</h1>
+					</section>
+
+					<section>
 						<h1>Concepts</h1>
 						<div class="content">
 							<ul>
 								<li class="fragment">Psuedo Elements<br /><a href="http://coding.smashingmagazine.com/2011/07/13/learning-to-use-the-before-and-after-pseudo-elements-in-css/">More Info</a></li>
 								<li class="fragment">HTML Entities in CSS<br /><a href="http://www.evotech.net/blog/2007/04/named-html-entities-in-numeric-order/">More Info</a></li>
 								<li class="fragment">SVG <br /><a href="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/getting-started-with-scalable-vector-graphics-svg/">More Info</a></li>
+								<li class="fragment">Position<br /><a href="http://alistapart.com/article/css-positioning-101"/>More Info</a></li>
 							</ul>	
 						</div>	
 					</section>
@@ -547,7 +680,7 @@
 								<li class="fragment">Border Radius<br /><a href="http://css-tricks.com/almanac/properties/b/border-radius/"/>More Info</a></li>
 								<li class="fragment">Box Shadow<br /><a href="http://css-tricks.com/snippets/css/css-box-shadow/"/>More Info</a></li>
 								<li class="fragment">Nth Child<br /><a href="http://css-tricks.com/how-nth-child-works/"/>More Info</a></li>
-								<li class="fragment">Position<br /><a href="http://alistapart.com/article/css-positioning-101"/>More Info</a></li>
+								
 								<li class="fragment">Float<br /><a href="http://css-tricks.com/all-about-floats/"/>More Info</a></li>
 								<li class="fragment">Shape Outside<br /><a href="http://blogs.adobe.com/webplatform/2013/03/27/freeing-the-floats-of-the-future-from-the-tyranny-of-the-rectangle"/>More Info</a></li>
 							</ul>	
