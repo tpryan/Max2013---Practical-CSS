@@ -18,5 +18,12 @@
 	/*border: 15px solid #FFF;
 	box-shadow: 0px 0px 1px #000,
 				2px 2px 5px rgba(0,0,0,.5);*/
+	/*-webkit-transform:rotate(10deg);
+	-moz-transform:rotate(10deg);
+	-o-transform:rotate(10deg);
+	transform:rotate(10deg);*/
 }
 
+.picture-holder img{
+	/*-webkit-filter:sepia(50%);*/
+}

@@ -605,7 +605,8 @@ top:130px;
 &lt;/div&gt;
 
 position: fixed;
-top:130px;
+top:0;
+right: 0;
 
 
 
@@ -627,13 +628,260 @@ top:130px;
 
 						</div>
 					</section>
+					<section class="question">
+						<h1>Transforms</h1>
+					</section>
+					<section>
+						<h1>Rotate</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
 
-					<section class="question">
-						<h1>Why it no work?</h1>
+-webkit-transform:rotate(10deg);
+-moz-transform:rotate(10deg);
+-o-transform:rotate(10deg);
+transform:rotate(10deg);
+
+
+
+
+							
+						</code></pre>
+
+						<style>
+							.reveal .rotate{
+								border: 1px solid green;
+								background-color: rgba(255,255,255,.5);
+								-webkit-transform:rotate(10deg);
+								-moz-transform:rotate(10deg);
+								-o-transform:rotate(10deg);
+								transform:rotate(10deg);
+							}
+						</style>
+						<div class="split-screen fragment">
+							<p class="rotate">Pithy Quote</p>
+
+						</div>
+					</section>
+					<section>
+						<h1>Skew</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
+
+-webkit-transform:skew(35deg);
+-moz-transform:skew(35deg);
+-o-transform:skew(35deg);
+transform:skew(35deg);
+
+
+
+
+							
+						</code></pre>
+
+						<style>
+							.reveal .skew{
+								border: 1px solid green;
+								background-color: rgba(255,255,255,.5);
+								-webkit-transform:skew(35deg);
+								-moz-transform:skew(35deg);
+								-o-transform:skew(35deg);
+								transform:skew(35deg);
+							}
+						</style>
+						<div class="split-screen fragment">
+							<p class="skew">Pithy Quote</p>
+
+						</div>
+					</section>
+					<section>
+						<h1>Multiple</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;div&gt;
+	&lt;p&gt;PithyQuote&lt;/p&gt; 
+&lt;/div&gt;
+
+
+transform:	
+	skew(30deg) 
+	scale(1.1,1.1) 
+	rotate(40deg) 
+	translate(10px, 20px);
+
+
+
+
+							
+						</code></pre>
+
+						<style>
+							.reveal .multi-transform{
+								border: 1px solid green;
+								background-color: rgba(255,255,255,.5);
+								-webkit-transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);;
+								-moz-transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);;
+								-o-transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);;
+								transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);;
+							}
+						</style>
+						<div class="split-screen fragment">
+							<p class="multi-transform">Pithy Quote</p>
+
+						</div>
+					</section>
+					<section>
+						<h1>Options</h1>
+						<pre><code contenteditable>
+matrix() matrix3d()
+
+translate() translateX() translateY() translateZ() translate3d()
+
+scale() scaleX() scaleY() scaleZ() scale3d()
+
+rotate() rotateX() rotateY() rotateZ() rotate3d()
+
+skewX() skewY()
+
+perspective()
+
+						</code></pre>
+
 					</section>
 					<section class="question">
-						<h1>Reveal.js</h1>
+						<h1>Filters</h1>
 					</section>
+					<section>
+						<h1>Base</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;img src="locationmarker.svg" /&gt;
+
+
+
+
+
+							
+						</code></pre>
+
+						<div class="split-screen fragment">
+							<img class="transparent" src="img/locationmarker.svg" width="200" />
+
+						</div>
+					</section>
+					<section>
+						<h1>Sepia</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;img src="locationmarker.svg" /&gt;
+
+-webkit-filter:sepia(100%);
+
+
+
+							
+						</code></pre>
+
+						<style>
+							.reveal .sepia{
+								-webkit-filter:sepia(100%);
+							}
+						</style>
+						<div class="split-screen fragment">
+							<img class="sepia transparent" src="img/locationmarker.svg" width="200" />
+
+						</div>
+					</section>
+					<section>
+						<h1>Saturate</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;img src="locationmarker.svg" /&gt;
+
+-webkit-filter:saturate(100);
+
+
+
+							
+						</code></pre>
+
+						<style>
+							.reveal .saturate{
+								-webkit-filter:saturate(100);
+							}
+						</style>
+						<div class="split-screen fragment">
+							<img class="saturate transparent" src="img/locationmarker.svg" width="200" />
+
+						</div>
+					</section>
+
+					<section>
+						<h1>Box Shadow</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;img src="locationmarker.svg" /&gt;
+
+box-shadow:  3px 3px 5px #000;
+
+
+
+							
+						</code></pre>
+
+						<style>
+							.reveal section .box-shadow{
+								box-shadow: 3px 3px 5px #000;
+								background: none;
+								border:none;
+							}
+						</style>
+						<div class="split-screen fragment">
+							<img class="box-shadow" src="img/locationmarker.svg" width="200" />
+
+						</div>
+					</section>
+
+					<section>
+						<h1>Drop Shadow</h1>
+						<pre class="split-screen"><code contenteditable>
+&lt;img src="locationmarker.svg" /&gt;
+
+-webkit-filter:
+drop-shadow(3px 3px 10px #000);
+
+
+
+							
+						</code></pre>
+
+						<style>
+							.reveal .drop-shadow{
+								-webkit-filter:drop-shadow(3px 3px 10px #000);
+							}
+						</style>
+						<div class="split-screen fragment">
+							<img class="drop-shadow transparent" src="img/locationmarker.svg" width="200" />
+
+						</div>
+					</section>
+					<section>
+						<h1>Options</h1>
+						<pre><code contenteditable>
+grayscale
+sepia
+saturate
+hue-rotate
+invert
+opacity
+brightness
+contrast
+blur
+drop-shadow
+						</code></pre>
+
+					</section>
+
+
+
 
 					<section>
 						<h1>Concepts</h1>
@@ -643,6 +891,9 @@ top:130px;
 								<li class="fragment">HTML Entities in CSS<br /><a href="http://www.evotech.net/blog/2007/04/named-html-entities-in-numeric-order/">More Info</a></li>
 								<li class="fragment">SVG <br /><a href="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/getting-started-with-scalable-vector-graphics-svg/">More Info</a></li>
 								<li class="fragment">Position<br /><a href="http://alistapart.com/article/css-positioning-101"/>More Info</a></li>
+								
+								<li class="fragment">Transforms<br /><a href="http://css3.bradshawenterprises.com/">More Info</a></li>
+								<li class="fragment">Filters<br /><a href="http://www.html5rocks.com/en/tutorials/filters/understanding-css/">More Info</a></li>
 							</ul>	
 						</div>	
 					</section>
@@ -942,12 +1193,94 @@ transition: all 1s ease-in-out;
 					</section>
 					<section class="question">
 						<div class="content">
-							<h1>CSS is for <br />presentation.</h1>
+							<h1>Why?</h1>
 						</div>	
 					</section>
 					<section class="question">
+						<img src="img/zen1.png" />
+					</section>
+					<section class="question">
+						<img src="img/zen2.png" />
+					</section>
+					<section class="question">
+						<img src="img/zen3.png" />
+					</section>
+					<section class="question">
+						<img class="transparent" src="img/edge_reflow_concept.png" />
+					</section>
+					<style>
+						.screens{
+							height: 700px;
+						}
+						.screen{
+							position: absolute;
+						}
+						.crt{
+							bottom: 40px;
+							right: 0;
+							z-index: 100;
+						}
+						.laptop{
+							bottom: 100px;
+							left: 0;
+							z-index: 0;
+							z-index: 100;
+						}
+						.iphone{
+							top: 0;
+							left: 300px;
+							z-index: 50;
+						}
+						.aphone{
+							top: 0;
+							left: 450px;
+							z-index: 50;
+						}
+						.tablet{
+							top: 175px;
+							left: 50px;
+							z-index: 175;
+						}
+						.tablet_ls{
+							top: 175px;
+							left:300px;
+							z-index: 175;
+						}
+						.ereader{
+							top: 175px;
+							right: 50px;
+							z-index: 175;
+						}
+						.tv{
+							top: 100px;
+							left: 90px;
+							z-index: 0;
+						}
+					</style>
+					<section>
+						<div class="screens">
+							<img src="img/crt.png" class="screen crt transparent" />
+							<img src="img/laptop.png" class="screen laptop transparent" />
+							<img src="img/iphone.png" class="screen iphone transparent" />
+							<img src="img/aphone.png" class="screen aphone transparent" />
+							<img src="img/tablet.png" class="screen tablet transparent" />
+							<img src="img/tablet_ls.png" class="screen tablet_ls transparent" />
+							<img src="img/ereader.png" class="screen ereader transparent" />
+							<img src="img/tv.png" class="screen tv transparent" />
+						</div>
+					</section>
+					<section class="question">
+						<img src="img/glass.jpg" />
+					</section>
+					<section class="question">
+						<img src="img/iwrist.jpg" />
+					</section>
+					<section class="question">
+						<img src="img/minority.jpg" />
+					</section>
+					<section class="question">
 						<div class="content">
-							<h1>It can handle what you throw at it.</h1>
+							<h1>Prepare for the unknown</h1>
 						</div>	
 					</section>
 
