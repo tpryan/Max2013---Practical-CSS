@@ -24,7 +24,6 @@
 
 .chathead-multiple img:nth-child(-n+3) {
 /*
-   display: block;
    width: 75px;
    height: 75px;
    display: inline-block;

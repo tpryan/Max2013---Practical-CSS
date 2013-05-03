@@ -30,12 +30,12 @@
 	background-image: -ms-linear-gradient(top, #FFB7B3, #FF0000);
 	background-image: -o-linear-gradient(top, #FFB7B3, #FF0000);
 	background-image: linear-gradient(top, bottom, #FFB7B3, #FF0000);
-
 	
 
 	/*pull it over other img*/
 	vertical-align: top;
 	margin-left: -25px;
+    margin-top: -10px;
 	box-shadow: -2px 5px 5px rgba(0, 0, 0, .7);
 
 }
